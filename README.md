@@ -14,10 +14,6 @@ What things you need to install the software and how to install them
 | :--------- | :---------- |
 | NodeJS     | >= v18.14.0 |
 
-### Branches and Development
-
-Underconstruction...
-
 ### Setup
 
 Install NodeJS
@@ -57,6 +53,10 @@ npm dev-start
 ## Built With
 
 - [ExpressJS](https://expressjs.com/) - A light-weight web application framework
+
+### Branches and Development
+
+Underconstruction...
 
 ## Versioning
 
