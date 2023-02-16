@@ -1,6 +1,6 @@
-# Project Title
+# Chat Messenging Service
 
-Chat Messenging Service
+Developed as a technical task requirement for Dev Centre House.
 
 ## Getting Started
 
@@ -24,6 +24,12 @@ Install NodeJS
 
 ```
 https://nodejs.org/en/download/
+```
+
+Clone repository
+
+```
+https://github.com/dwiferrer/Chat-Messenging-Service.git
 ```
 
 Install dependencies
