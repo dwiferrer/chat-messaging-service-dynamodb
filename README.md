@@ -36,7 +36,12 @@ npm install
 
 Create .env file
 
-- Sample variables in .env-sample file
+- Fill up env variables
+
+```
+PORT =
+MONGO_DB_URI =
+```
 
 Run application
 
