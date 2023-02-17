@@ -1,4 +1,4 @@
-# Chat Messenging Service
+# Chat Messaging Service
 
 Developed as a technical task requirement for Dev Centre House.
 
