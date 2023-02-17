@@ -57,7 +57,7 @@ npm run start-dev
 
 ## API Documentation
 
-Send Message
+### Send Message
 
 - Creates message
 
@@ -75,7 +75,7 @@ Sample request body:
 // message required
 ```
 
-Read all message
+### Read all message
 
 - Fetch all messages
 
@@ -106,7 +106,7 @@ Sample response:
 ]
 ```
 
-Read message by id
+### Read message by id
 
 - Confirms receiving the message
 
@@ -130,7 +130,7 @@ Sample response:
 }
 ```
 
-Delete message by id
+### Delete message by id
 
 - Deletes message by id
 
