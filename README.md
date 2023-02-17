@@ -25,7 +25,7 @@ https://nodejs.org/en/download/
 Clone repository
 
 ```
-https://github.com/dwiferrer/chat-messaging-Service.git
+https://github.com/dwiferrer/chat-messaging-service.git
 ```
 
 Install dependencies
