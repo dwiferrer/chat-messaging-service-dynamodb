@@ -71,6 +71,8 @@ Sample request body:
 {
     "message": "Hello world!"
 }
+
+// message required
 ```
 
 Read all message
