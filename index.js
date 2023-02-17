@@ -1,9 +1,11 @@
 const express = require('express');
 const dotenv = require('dotenv').config();
-const connectDB = require('./config/db');
 const logger = require('morgan');
-const messagesRoute = require('./routes/messagesRoute');
+
+const connectDB = require('./config/db');
 const port = process.env.PORT || 3000;
+
+const messagesRoute = require('./routes/messagesRoute');
 
 connectDB();
 const app = express();

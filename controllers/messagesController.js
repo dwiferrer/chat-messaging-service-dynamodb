@@ -7,7 +7,7 @@ const createMessage = async (req, res) => {
     if (!message) {
       return res
         .status(400)
-        .json({ status: 'Error', message: 'Message not found.' });
+        .json({ status: 'Error', message: 'Message not provided in body.' });
     }
 
     const createdMessage = await messagesService.createMessage({ message });
@@ -57,7 +57,7 @@ const deleteMessage = async (req, res) => {
     }
 
     await messagesService.deleteMessage(id);
-    return res.status(200).json({ message: 'Message deleted.' });
+    return res.status(200).json('Message successfully deleted.');
   } catch (err) {
     throw new Error(err.message);
   }
