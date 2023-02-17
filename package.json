@@ -1,5 +1,5 @@
 {
-  "name": "chat-messenging-service",
+  "name": "chat-messaging-service",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dwiferrer/Chat-Messenging-Service.git"
+    "url": "git+https://github.com/dwiferrer/chat-messaging-service.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dwiferrer/Chat-Messenging-Service/issues"
+    "url": "https://github.com/dwiferrer/chat-messaging-service/issues"
   },
-  "homepage": "https://github.com/dwiferrer/Chat-Messenging-Service#readme",
+  "homepage": "https://github.com/dwiferrer/chat-messaging-service#readme",
   "dependencies": {
     "express": "^4.18.2",
     "mongoose": "^6.9.1",
