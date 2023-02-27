@@ -3,8 +3,9 @@ const router = express.Router();
 const messagesController = require('../controllers/messagesController');
 
 router.post('/', messagesController.createMessage);
-router.get('/', messagesController.getMessages);
-router.get('/:id', messagesController.getMessage);
+router.post('/bulk', messagesController.createBulkMessages);
+router.delete('/bulk', messagesController.deleteBulkMessages);
+router.get('/:username', messagesController.getMessagesByUsername);
 router.delete('/:id', messagesController.deleteMessage);
 
 module.exports = router;
