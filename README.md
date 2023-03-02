@@ -1,4 +1,4 @@
-# Chat Messaging Service
+# Simple RabbitMQ Service
 
 Developed as a technical task requirement for Dev Centre House.
 
@@ -25,7 +25,7 @@ https://nodejs.org/en/download/
 Clone repository
 
 ```
-git clone https://github.com/dwiferrer/chat-messaging-service.git
+git clone https://github.com/dwiferrer/chat-messaging-service-dynamodb
 ```
 
 Install dependencies
@@ -40,7 +40,10 @@ Create .env file
 
 ```
 PORT =
-MONGO_DB_URI =
+AWS_DEFAULT_REGION =
+AWS_ACCESS_KEY_ID =
+AWS_SECRET_ACCESS_KEY =
+
 ```
 
 Run application
@@ -69,18 +72,60 @@ POST /api/messages
 Sample request body:
 
 {
-    "message": "Hello world!"
+    "username": "dwight",
+    "message": "Hello world"
 }
 
-// message required
+// username and message required
 ```
 
-### Read all message
+```
+Sample response:
 
-- Fetch all messages
+"Message successfully sent!"
+```
+
+### Create bulk messages
+
+- Bulk creates messages
 
 ```
-GET /api/messages
+POST /api/messages/bulk
+```
+
+```
+Sample request:
+
+[
+    {
+        "username": "dwight",
+        "message": "Hello world 2"
+    },
+    {
+        "username": "dwight",
+        "message": "Hello world 3"
+    },
+    {
+        "username": "dwight",
+        "message": "Hello world 4"
+    }
+]
+```
+
+```
+Sample response:
+
+"Messages successfully sent!"
+```
+
+### Read message by username
+
+- Gets messages by username
+
+```
+GET /api/messages/:username
+
+// username required
 ```
 
 ```
@@ -88,46 +133,18 @@ Sample response:
 
 [
     {
-        "_id": "63ee88acaf3242922ce7efbe",
-        "message": "Fifth Message",
-        "id": "79dc024d-b123-4f56-8b51-a98f30c847f0",
-        "createdAt": "2023-02-16T19:49:00.058Z",
-        "updatedAt": "2023-02-16T19:49:00.058Z",
-        "__v": 0
+        "username": "dwight",
+        "message": "Hello world 1"
     },
     {
-        "_id": "63ef176b1ac5c89f695a5e2f",
-        "message": "Hello World!",
-        "id": "8e76251e-f0d6-4691-bc33-aaa39ac90e93",
-        "createdAt": "2023-02-17T05:58:03.406Z",
-        "updatedAt": "2023-02-17T05:58:03.406Z",
-        "__v": 0
+        "username": "dwight",
+        "message": "Hello world 2"
+    },
+    {
+        "username": "dwight",
+        "message": "Hello world 3"
     }
 ]
-```
-
-### Read message by id
-
-- Confirms receiving the message
-
-```
-GET /api/messages/:id
-
-// where id = uuid of message to be read
-// id required
-```
-
-```
-Sample response:
-
-{
-    "_id": "63ef176b1ac5c89f695a5e2f",
-    "message": "Hello World!",
-    "id": "8e76251e-f0d6-4691-bc33-aaa39ac90e93",
-    "createdAt": "2023-02-17T05:58:03.406Z",
-    "updatedAt": "2023-02-17T05:58:03.406Z",
-    "__v": 0
-}
 ```
 
 ### Delete message by id
@@ -145,6 +162,36 @@ DELETE /api/messages/:id
 Sample response:
 
 "Message successfully deleted."
+```
+
+### Delete bulk messages by id
+
+- Deletes bulk messages by id
+
+```
+DELETE /api/messages/bulk
+```
+
+```
+Sample request:
+
+[
+    {
+        "id": "c641a5a7-f560-49fe-9c88-06735e260e20"
+    },
+    {
+        "id": "4baa064d-8fab-40b7-862d-730c2c3951b4"
+    },
+    {
+        "id": "c910e669-93d4-4ba5-ae92-fed64e2d590c"
+    }
+]
+```
+
+```
+Sample response:
+
+"Messages successfully deleted."
 ```
 
 ## Built With
